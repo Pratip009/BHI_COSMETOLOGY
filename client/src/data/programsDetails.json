@@ -1,0 +1,46 @@
+{
+  "courses": [
+    {
+      "courseName": "Cosmetology",
+      "overview": "Our Cosmetology course offers comprehensive training in hair cutting, coloring, styling, chemical treatments, and makeup application to prepare you for a successful career in the beauty industry.",
+      "duration": "1500 Hours",
+      "classStart": "9th September",
+      "certification": "Licensed Cosmetologist",
+      "courseDescriptionHeadVideo":"https://videos.pexels.com/video-files/3182035/3182035-sd_640_360_25fps.mp4",
+      "courseDescriptionHead": "Get the skills to be a cosmetology professional",
+      "courseDescription": "The hybrid cosmetology program at Avenue Five Institute combines flexible online learning with on-campus training. Students will learn foundational techniques in hair cutting, coloring, skincare, and makeup application while also developing professional business skills crucial to success in the beauty industry.By completing coursework through a hybrid cosmetology school and gaining practical experience in a salon environment, students are prepared for licensure and a variety of career paths. Whether pursuing a role in a salon, freelance work, or other beauty services, graduates are equipped with the necessary skills to thrive as licensed cosmetologists.",
+      "flexibleLearningHeading": "COSMETOLOGY FLEXIBLE LEARNING",
+      "flexibleLearningDesc": "Avenue Five Institute’s 1000-hour Hybrid Cosmetology Program is the modern answer to beauty education. This program combines the flexibility of online cosmetology training with critically important in-person spa experience, hands-on practice, and industry support needed to pursue a successful beauty career. With hybrid learning, you have the opportunity to train from home for a portion of the program, saving both time and money without the hassle of commuting. Plus, you can graduate and begin your new career in less than 9 months!",
+      "distanceLearning": "FLEXIBLE ONLINE DISTANCE LEARNING",
+      "distanceLearningDesc": "Choose from one of Avenue Five Institute’s flexible YourTime™ Schedules and find the perfect time to learn. With a combination of on-campus and distance learning, our schedules are designed with real schedules for real life in mind, allowing you to balance your education with your other commitments.Students are scheduled to attend 4 hours on-campus each day, Monday through Friday, while completing 10 hours of distance learning each week. Our flexible schedules help you avoid peak traffic hours and provide the freedom to pursue your new career, all while graduating in less than a year*!",
+      "morningTime": "Monday – Friday 8:30AM – 12:30PM Plus 10 Hrs/wk distance learning",
+      "afternoonTime": "Monday – Friday 1:00PM – 5:00PM Plus 10 Hrs/wk distance learning",
+      "eveningTime": "Monday – Friday 5:30PM – 9:30PM Plus 10 Hrs/wk distance learning",
+      "learningMaterial": "Our program and facilities have been strategically designed based on the proven working knowledge of master educators and beauty industry professionals. Avenue Five Institute’s student-centered approach gives you plenty of opportunity for interactive, activity-based learning.Taught by experienced educators, Avenue Five Institute’s hybrid learning environment allows students to combine interactive online curriculum covering esthetic theory and techniques with practical experience in a simulated salon environment, working under the supervision of a skilled instructor.",
+      "image": "https://www.avenuefive.edu/wp-content/uploads/2024/09/cosdesktop-1-1024x444.png",
+      "buttonText": "View Programs",
+      "faqs": [
+        {
+          "title": "Facial Treatments",
+          "description": "Discover the fundamentals of facial treatments, including cleansing, exfoliating, and moisturizing techniques tailored to various skin types. You’ll learn to perform relaxing and therapeutic facials, using professional products and tools to enhance skin health and appearance."
+        },
+        {
+          "title": "Skin Analysis",
+          "description": "Gain proficiency in analyzing different skin types and conditions to provide personalized skincare solutions. You’ll learn to assess texture, tone, and elasticity to recommend appropriate treatments and products that address specific client needs."
+        },
+        {
+          "title": "Chemical Peels",
+          "description": "Learn to safely perform chemical peels, including alpha hydroxy acid (AHA) and beta hydroxy acid (BHA) treatments. Understand how to apply these solutions to exfoliate and rejuvenate the skin, addressing concerns like acne, pigmentation, and fine lines."
+        },
+        {
+          "title": "Microdermabrasion",
+          "description": "Master the techniques of microdermabrasion, a non-invasive procedure that gently exfoliates the skin to improve texture and promote cell renewal. You’ll learn to use specialized equipment to provide effective treatments that leave skin smooth and revitalized."
+        },
+        {
+          "title": "Hair Removal Techniques",
+          "description": "Explore various hair removal methods, including waxing, threading, and sugaring.  Learn how these techniques are performed safely and effectively to remove unwanted hair while minimizing client discomfort."
+        }
+      ]
+    }
+  ]
+}
