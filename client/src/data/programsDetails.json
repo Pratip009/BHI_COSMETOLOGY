@@ -41,6 +41,133 @@
           "description": "Explore various hair removal methods, including waxing, threading, and sugaring.  Learn how these techniques are performed safely and effectively to remove unwanted hair while minimizing client discomfort."
         }
       ]
-    }
+    },
+    {
+  "courseName": "Barbering",
+  "overview": "Our Barbering course offers specialized training in men's hair cutting, styling, and grooming techniques to prepare you for a successful career in the barbering industry.",
+  "duration": "9 Months",
+  "classStart": "9th September",
+  "certification": "Licensed Barber",
+  "courseDescriptionHeadVideo": "https://www.pexels.com/video/hands-woman-girl-model-3997026/",
+  "courseDescriptionHead": "Barber Course Overview",
+  "courseDescription": "Our Barber course provides comprehensive training in all aspects of men's grooming, including hair cutting, styling, and shaving techniques. You'll gain hands-on experience with the latest tools and products to ensure your clients leave looking and feeling their best.",
+  "flexibleLearningHeading": "Flexible Learning Options",
+  "flexibleLearningDesc": "We offer flexible learning options to accommodate your busy schedule. Choose from part-time or full-time classes, with evening and weekend availability.",
+  "distanceLearning": "Available",
+  "distanceLearningDesc": "Our distance learning program allows you to study from anywhere, with access to online resources and virtual classrooms.",
+  "morningTime": "9:00 AM - 12:00 PM",
+  "afternoonTime": "1:00 PM - 4:00 PM",
+  "eveningTime": "5:00 PM - 8:00 PM",
+  "learningMaterial": "All necessary learning materials are provided, including textbooks, online resources, and practical kits.",
+  "image": "https://images.pexels.com/photos/3993472/pexels-photo-3993472.jpeg",
+  "buttonText": "View Programs",
+  "faqs": [
+        {
+          "title": "Facial Treatments",
+          "description": "Discover the fundamentals of facial treatments, including cleansing, exfoliating, and moisturizing techniques tailored to various skin types. You’ll learn to perform relaxing and therapeutic facials, using professional products and tools to enhance skin health and appearance."
+        },
+        {
+          "title": "Skin Analysis",
+          "description": "Gain proficiency in analyzing different skin types and conditions to provide personalized skincare solutions. You’ll learn to assess texture, tone, and elasticity to recommend appropriate treatments and products that address specific client needs."
+        },
+        {
+          "title": "Chemical Peels",
+          "description": "Learn to safely perform chemical peels, including alpha hydroxy acid (AHA) and beta hydroxy acid (BHA) treatments. Understand how to apply these solutions to exfoliate and rejuvenate the skin, addressing concerns like acne, pigmentation, and fine lines."
+        },
+        {
+          "title": "Microdermabrasion",
+          "description": "Master the techniques of microdermabrasion, a non-invasive procedure that gently exfoliates the skin to improve texture and promote cell renewal. You’ll learn to use specialized equipment to provide effective treatments that leave skin smooth and revitalized."
+        },
+        {
+          "title": "Hair Removal Techniques",
+          "description": "Explore various hair removal methods, including waxing, threading, and sugaring.  Learn how these techniques are performed safely and effectively to remove unwanted hair while minimizing client discomfort."
+        }
+      ]
+},
+ {
+  "courseName": "Nail Technology",
+  "overview": "Our Nail Technology course offers specialized training in nail care, including manicures, pedicures, and nail enhancements to prepare you for a successful career in the beauty industry.",
+  "duration": "6 Months",
+  "classStart": "9th September",
+  "certification": "Licensed Nail Technician",
+  "courseDescriptionHeadVideo": "https://www.pexels.com/video/hands-woman-girl-model-3997026/",
+  "courseDescriptionHead": "Nail Technology Course Overview",
+  "courseDescription": "Our Nail Technology course provides comprehensive training in all aspects of nail care, including nail shaping, polish application, and nail art techniques. You'll gain hands-on experience with the latest tools and products to ensure your clients leave with beautiful, healthy nails.",
+  "flexibleLearningHeading": "Flexible Learning Options",
+  "flexibleLearningDesc": "We offer flexible learning options to accommodate your busy schedule. Choose from part-time or full-time classes, with evening and weekend availability.",
+  "distanceLearning": "Available",
+  "distanceLearningDesc": "Our distance learning program allows you to study from anywhere, with access to online resources and virtual classrooms.",
+  "morningTime": "9:00 AM - 12:00 PM",
+  "afternoonTime": "1:00 PM - 4:00 PM",
+  "eveningTime": "5:00 PM - 8:00 PM",
+  "learningMaterial": "All necessary learning materials are provided, including textbooks, online resources, and practical kits.",
+  "image": "https://images.pexels.com/photos/3422099/pexels-photo-3422099.jpeg",
+  "buttonText": "View Programs",
+  "faqs": [
+        {
+          "title": "Facial Treatments",
+          "description": "Discover the fundamentals of facial treatments, including cleansing, exfoliating, and moisturizing techniques tailored to various skin types. You’ll learn to perform relaxing and therapeutic facials, using professional products and tools to enhance skin health and appearance."
+        },
+        {
+          "title": "Skin Analysis",
+          "description": "Gain proficiency in analyzing different skin types and conditions to provide personalized skincare solutions. You’ll learn to assess texture, tone, and elasticity to recommend appropriate treatments and products that address specific client needs."
+        },
+        {
+          "title": "Chemical Peels",
+          "description": "Learn to safely perform chemical peels, including alpha hydroxy acid (AHA) and beta hydroxy acid (BHA) treatments. Understand how to apply these solutions to exfoliate and rejuvenate the skin, addressing concerns like acne, pigmentation, and fine lines."
+        },
+        {
+          "title": "Microdermabrasion",
+          "description": "Master the techniques of microdermabrasion, a non-invasive procedure that gently exfoliates the skin to improve texture and promote cell renewal. You’ll learn to use specialized equipment to provide effective treatments that leave skin smooth and revitalized."
+        },
+        {
+          "title": "Hair Removal Techniques",
+          "description": "Explore various hair removal methods, including waxing, threading, and sugaring.  Learn how these techniques are performed safely and effectively to remove unwanted hair while minimizing client discomfort."
+        }
+      ]
+},
+{
+  "courseName": "Esthetician",
+  "overview": "Our Nail Technology course offers specialized training in nail care, including manicures, pedicures, and nail enhancements to prepare you for a successful career in the beauty industry.",
+  "duration": "6 Months",
+  "classStart": "9th September",
+  "certification": "Licensed Nail Technician",
+  "courseDescriptionHeadVideo": "https://www.pexels.com/video/hands-woman-girl-model-3997026/",
+  "courseDescriptionHead": "Nail Technology Course Overview",
+  "courseDescription": "Our Nail Technology course provides comprehensive training in all aspects of nail care, including nail shaping, polish application, and nail art techniques. You'll gain hands-on experience with the latest tools and products to ensure your clients leave with beautiful, healthy nails.",
+  "flexibleLearningHeading": "Flexible Learning Options",
+  "flexibleLearningDesc": "We offer flexible learning options to accommodate your busy schedule. Choose from part-time or full-time classes, with evening and weekend availability.",
+  "distanceLearning": "Available",
+  "distanceLearningDesc": "Our distance learning program allows you to study from anywhere, with access to online resources and virtual classrooms.",
+  "morningTime": "9:00 AM - 12:00 PM",
+  "afternoonTime": "1:00 PM - 4:00 PM",
+  "eveningTime": "5:00 PM - 8:00 PM",
+  "learningMaterial": "All necessary learning materials are provided, including textbooks, online resources, and practical kits.",
+  "image": "https://images.pexels.com/photos/7755531/pexels-photo-7755531.jpeg",
+  "buttonText": "View Programs",
+  "faqs": [
+        {
+          "title": "Facial Treatments",
+          "description": "Discover the fundamentals of facial treatments, including cleansing, exfoliating, and moisturizing techniques tailored to various skin types. You’ll learn to perform relaxing and therapeutic facials, using professional products and tools to enhance skin health and appearance."
+        },
+        {
+          "title": "Skin Analysis",
+          "description": "Gain proficiency in analyzing different skin types and conditions to provide personalized skincare solutions. You’ll learn to assess texture, tone, and elasticity to recommend appropriate treatments and products that address specific client needs."
+        },
+        {
+          "title": "Chemical Peels",
+          "description": "Learn to safely perform chemical peels, including alpha hydroxy acid (AHA) and beta hydroxy acid (BHA) treatments. Understand how to apply these solutions to exfoliate and rejuvenate the skin, addressing concerns like acne, pigmentation, and fine lines."
+        },
+        {
+          "title": "Microdermabrasion",
+          "description": "Master the techniques of microdermabrasion, a non-invasive procedure that gently exfoliates the skin to improve texture and promote cell renewal. You’ll learn to use specialized equipment to provide effective treatments that leave skin smooth and revitalized."
+        },
+        {
+          "title": "Hair Removal Techniques",
+          "description": "Explore various hair removal methods, including waxing, threading, and sugaring.  Learn how these techniques are performed safely and effectively to remove unwanted hair while minimizing client discomfort."
+        }
+      ]
+}
+
   ]
 }
