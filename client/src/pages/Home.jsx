@@ -74,43 +74,36 @@ const HomePage = () => {
 
           {/* Inquiry Form */}
           <form className="mt-6 w-full max-w-6xl grid grid-cols-1 md:grid-cols-4 gap-4 px-4">
-            <input
-              type="text"
-              placeholder="First Name"
-              className="p-3 rounded text-black"
-            />
-            <input
-              type="text"
-              placeholder="Last Name"
-              className="p-3 rounded text-black"
-            />
-            <input
-              type="email"
-              placeholder="Email"
-              className="p-3 rounded text-black"
-            />
-            <input
-              type="tel"
-              placeholder="Phone"
-              className="p-3 rounded text-black"
-            />
+            {[
+              { type: "text", placeholder: "First Name" },
+              { type: "text", placeholder: "Last Name" },
+              { type: "email", placeholder: "Email" },
+              { type: "tel", placeholder: "Phone" },
+            ].map((field, idx) => (
+              <input
+                key={idx}
+                type={field.type}
+                placeholder={field.placeholder}
+                className="p-3 rounded-3xl bg-white text-black placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-[#ea384d] shadow-sm transition duration-200"
+              />
+            ))}
 
-            <select className="p-3 rounded text-black">
+            <select className="p-3 rounded-3xl bg-white text-black focus:outline-none focus:ring-2 focus:ring-[#ea384d] shadow-sm transition duration-200">
               <option>Program</option>
               <option>Cosmetology</option>
               <option>Barbering</option>
             </select>
-            <select className="p-3 rounded text-black">
+            <select className="p-3 rounded-3xl bg-white text-black focus:outline-none focus:ring-2 focus:ring-[#ea384d] shadow-sm transition duration-200">
               <option>Schedule</option>
               <option>Morning</option>
               <option>Evening</option>
             </select>
-            <select className="p-3 rounded text-black">
+            <select className="p-3 rounded-3xl bg-white text-black focus:outline-none focus:ring-2 focus:ring-[#ea384d] shadow-sm transition duration-200">
               <option>Location</option>
               <option>Austin</option>
               <option>Round Rock</option>
             </select>
-            <select className="p-3 rounded text-black">
+            <select className="p-3 rounded-3xl bg-white text-black focus:outline-none focus:ring-2 focus:ring-[#ea384d] shadow-sm transition duration-200">
               <option>How Did You Hear About Us?</option>
               <option>Google</option>
               <option>Social Media</option>
@@ -243,11 +236,10 @@ const HomePage = () => {
           Get Started
         </button>
       </div>
-      <VirtualTour/>
-      <EventGallery/>
+      <VirtualTour />
+      <EventGallery />
       <SocialBar />
       <ScrollToTopButton />
-
     </>
   );
 };

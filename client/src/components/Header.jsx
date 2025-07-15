@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { FiMenu, FiX } from "react-icons/fi";
-
+import logo from "../assets/CSJC Logo.svg";
 const Header = () => {
   const [menuOpen, setMenuOpen] = useState(false);
   const toggleMenu = () => setMenuOpen(!menuOpen);
@@ -14,10 +14,10 @@ const Header = () => {
           Call Us: 512-630-0099
         </a>
         <Link
-          to="/apply"
+          to="/signup"
           className="bg-[#ea384d] hover:bg-[#e76c7a] text-white px-4 py-2 rounded font-bold"
         >
-          Apply Now
+          Sign Up
         </Link>
       </div>
 
@@ -25,7 +25,11 @@ const Header = () => {
       <div className="bg-white shadow flex justify-between items-center px-6 py-4">
         {/* Logo */}
         <Link to="/" className="flex items-center space-x-2">
-          <span className="text-xl font-bold tracking-wide">BHI</span>
+          <img
+            src={logo} // <-- replace with your actual logo path
+            alt="Logo"
+            className="h-10 w-auto object-contain"
+          />
         </Link>
 
         {/* Desktop Menu */}
@@ -33,10 +37,10 @@ const Header = () => {
           <Link to="/">Home</Link>
           <Link to="/about">About Us</Link>
           <Link to="/contact">Contact</Link>
-          <Link to="/financial-aid">Financial Aid / Resources</Link>
-          <div className="group relative inline-block">
+
+          <div className="relative group">
             <button className="hover:text-blue-500">Programs ▾</button>
-            <div className="absolute hidden group-hover:block bg-white shadow-md mt-2 rounded z-50 group">
+            <div className="absolute left-0 mt-2 w-48 bg-white shadow-md rounded hidden group-hover:block z-50">
               <Link
                 to="/programs/cosmetology"
                 className="block px-4 py-2 hover:bg-gray-100"
@@ -93,7 +97,7 @@ const Header = () => {
           <Link to="/">Home</Link>
           <Link to="/about">About Us</Link>
           <Link to="/contact">Contact</Link>
-          <Link to="/financial-aid">Financial Aid / Resources</Link>
+
           <div>
             <span className="block font-semibold mt-2">Programs</span>
             <Link to="/programs/cosmetology">Cosmetology</Link>

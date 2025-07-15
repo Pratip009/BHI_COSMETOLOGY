@@ -6,7 +6,7 @@ import About from "../pages/About";
 import Contact from "../pages/Contact";
 import FAQ from "../pages/FAQ";
 import Gallery from "../pages/Gallery";
-import FinancialAid from "../pages/FinancialAid";
+import SignUp from "../pages/SignUp"
 import Calendar from "../pages/Calendar";
 import SalonServices from "../pages/SalonServices";
 import SocialUpdates from "../pages/SocialUpdates";
@@ -24,11 +24,12 @@ export default function AppRouter() {
       <MainLayout>
         <Routes>
           <Route path="/" element={<Home />} />
+          <Route path="/signup" element={<SignUp />} />
           <Route path="/about" element={<About />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/faq" element={<FAQ />} />
           <Route path="/gallery" element={<Gallery />} />
-          <Route path="/financial-aid" element={<FinancialAid />} />
+       
           <Route path="/calendar" element={<Calendar />} />
           <Route path="/salon-services" element={<SalonServices />} />
           <Route path="/social-updates" element={<SocialUpdates />} />
