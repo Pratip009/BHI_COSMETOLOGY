@@ -42,79 +42,88 @@ const HomePage = () => {
   return (
     <>
       {/* Hero Section with Video */}
-      <div className="relative w-full h-screen overflow-hidden">
-        <video
-          className="absolute top-0 left-0 w-full h-full object-cover z-0"
-          autoPlay
-          loop
-          muted
-        >
-          <source
-            src="https://images.glamsquad.com/client/www/hero-video-mobile.mp4"
-            type="video/mp4"
-          />
-          Your browser does not support the video tag.
-        </video>
+      <div className="relative w-full min-h-screen overflow-hidden">
+  {/* Video Background */}
+  <video
+    className="absolute top-0 left-0 w-full h-full object-cover z-0"
+    autoPlay
+    loop
+    muted
+    playsInline
+  >
+    <source
+      src="https://images.glamsquad.com/client/www/hero-video-mobile.mp4"
+      type="video/mp4"
+    />
+    Your browser does not support the video tag.
+  </video>
 
-        <div className="absolute top-0 left-0 w-full h-full bg-black bg-opacity-20 z-10" />
+  {/* Black Overlay */}
+  <div className="absolute top-0 left-0 w-full h-full bg-black bg-opacity-30 z-10" />
 
-        <div className="relative z-20 flex flex-col items-center justify-center h-full text-white px-4 text-center">
-          <h1 className="text-3xl sm:text-4xl md:text-5xl font-extrabold leading-tight max-w-4xl">
-            HANDS-ON COSMETOLOGY, ESTHETICS, NAILS, AND BARBERING PROGRAMS IN
-            NEW JERSEY
-          </h1>
+  {/* Foreground Content */}
+  <div className="relative z-20 flex flex-col items-center justify-center min-h-screen text-white px-4 py-12 text-center">
+    {/* Heading */}
+    <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-extrabold leading-tight max-w-5xl">
+      HANDS-ON COSMETOLOGY, ESTHETICS, NAILS, AND BARBERING PROGRAMS IN NEW JERSEY
+    </h1>
 
-          <button className="mt-6 bg-[#ea384d] hover:bg-[#e76c7a] text-white font-bold py-3 px-6 rounded">
-            VIEW PROGRAMS
-          </button>
+    {/* View Programs Button */}
+    <button className="mt-6 bg-[#ea384d] hover:bg-[#e76c7a] text-white font-bold py-3 px-6 rounded text-sm sm:text-base">
+      VIEW PROGRAMS
+    </button>
 
-          <h2 className="mt-8 text-2xl md:text-3xl font-bold">
-            NEXT CLASSES START JUNE 2
-          </h2>
+    {/* Subheading */}
+    <h2 className="mt-8 text-xl sm:text-2xl md:text-3xl font-bold">
+      NEXT CLASSES START JUNE 2
+    </h2>
 
-          {/* Inquiry Form */}
-          <form className="mt-6 w-full max-w-6xl grid grid-cols-1 md:grid-cols-4 gap-4 px-4">
-            {[
-              { type: "text", placeholder: "First Name" },
-              { type: "text", placeholder: "Last Name" },
-              { type: "email", placeholder: "Email" },
-              { type: "tel", placeholder: "Phone" },
-            ].map((field, idx) => (
-              <input
-                key={idx}
-                type={field.type}
-                placeholder={field.placeholder}
-                className="p-3 rounded-3xl bg-white text-black placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-[#ea384d] shadow-sm transition duration-200"
-              />
-            ))}
+    {/* Inquiry Form */}
+    <form className="mt-6 w-full max-w-6xl grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 px-2 sm:px-4">
+      {[
+        { type: "text", placeholder: "First Name" },
+        { type: "text", placeholder: "Last Name" },
+        { type: "email", placeholder: "Email" },
+        { type: "tel", placeholder: "Phone" },
+      ].map((field, idx) => (
+        <input
+          key={idx}
+          type={field.type}
+          placeholder={field.placeholder}
+          className="p-3 rounded-3xl bg-white text-black placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-[#ea384d] shadow-sm transition duration-200"
+        />
+      ))}
 
-            <select className="p-3 rounded-3xl bg-white text-black focus:outline-none focus:ring-2 focus:ring-[#ea384d] shadow-sm transition duration-200">
-              <option>Program</option>
-              <option>Cosmetology</option>
-              <option>Barbering</option>
-            </select>
-            <select className="p-3 rounded-3xl bg-white text-black focus:outline-none focus:ring-2 focus:ring-[#ea384d] shadow-sm transition duration-200">
-              <option>Schedule</option>
-              <option>Morning</option>
-              <option>Evening</option>
-            </select>
-            <select className="p-3 rounded-3xl bg-white text-black focus:outline-none focus:ring-2 focus:ring-[#ea384d] shadow-sm transition duration-200">
-              <option>Location</option>
-              <option>Austin</option>
-              <option>Round Rock</option>
-            </select>
-            <select className="p-3 rounded-3xl bg-white text-black focus:outline-none focus:ring-2 focus:ring-[#ea384d] shadow-sm transition duration-200">
-              <option>How Did You Hear About Us?</option>
-              <option>Google</option>
-              <option>Social Media</option>
-            </select>
-          </form>
+      {/* Select Fields */}
+      <select className="p-3 rounded-3xl bg-white text-black focus:outline-none focus:ring-2 focus:ring-[#ea384d] shadow-sm transition duration-200">
+        <option>Program</option>
+        <option>Cosmetology</option>
+        <option>Barbering</option>
+      </select>
+      <select className="p-3 rounded-3xl bg-white text-black focus:outline-none focus:ring-2 focus:ring-[#ea384d] shadow-sm transition duration-200">
+        <option>Schedule</option>
+        <option>Morning</option>
+        <option>Evening</option>
+      </select>
+      <select className="p-3 rounded-3xl bg-white text-black focus:outline-none focus:ring-2 focus:ring-[#ea384d] shadow-sm transition duration-200">
+        <option>Location</option>
+        <option>Austin</option>
+        <option>Round Rock</option>
+      </select>
+      <select className="p-3 rounded-3xl bg-white text-black focus:outline-none focus:ring-2 focus:ring-[#ea384d] shadow-sm transition duration-200">
+        <option>How Did You Hear About Us?</option>
+        <option>Google</option>
+        <option>Social Media</option>
+      </select>
+    </form>
 
-          <button className="mt-6 bg-[#ea384d] hover:bg-[#e76c7a] text-white font-bold py-3 px-6 rounded">
-            REQUEST INFO
-          </button>
-        </div>
-      </div>
+    {/* Request Info Button */}
+    <button className="mt-6 bg-[#ea384d] hover:bg-[#e76c7a] text-white font-bold py-3 px-6 rounded text-sm sm:text-base">
+      REQUEST INFO
+    </button>
+  </div>
+</div>
+
 
       {/* Banner Section */}
       <div className="bg-[#07218F] text-white text-center py-10 px-2 text-sm">
