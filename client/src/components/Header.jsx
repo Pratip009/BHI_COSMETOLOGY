@@ -27,10 +27,10 @@ const Header = () => {
       {/* Top Utility Bar */}
       <div className="bg-[#07218F] text-white text-xs sm:text-sm py-2 px-3 sm:px-4 flex justify-between sm:justify-end items-center flex-wrap gap-y-2 font-semibold">
         <a
-          href="tel:512-630-0099"
+          href="tel:201-721-5574"
           className=" sm:pr-4 text-center w-full sm:w-auto"
         >
-          Call Us: 512-630-0099
+          Call Us: 201-721-5574
         </a>
         <Link
           to="/signup"
