@@ -83,3 +83,7 @@
   left: 0;
   z-index: 1; /* behind front by default */
 }
+header, header * {
+  max-width: 100vw;
+  overflow-x: hidden;
+}
