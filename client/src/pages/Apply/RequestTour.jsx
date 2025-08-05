@@ -1,5 +1,7 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { FaCheckCircle } from "react-icons/fa";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const ScheduleTour = () => {
   const [formData, setFormData] = useState({
@@ -15,6 +17,10 @@ const ScheduleTour = () => {
     hearAbout: '',
     consent: false,
   });
+
+  useEffect(() => {
+    AOS.init({ duration: 1000, once: true });
+  }, []);
 
   const handleChange = (e) => {
     const { name, value, type, checked } = e.target;
@@ -33,12 +39,16 @@ const ScheduleTour = () => {
 
   return (
     <div className="bg-gradient-to-tr from-white to-slate-100 min-h-screen px-4 py-14 md:px-10">
-      <h1 className="text-4xl font-extrabold text-center mb-12 text-gray-800">
+      <h1
+        className="text-4xl font-extrabold text-center mb-12 text-gray-800"
+        data-aos="fade-down"
+      >
         Schedule a <span className="text-blue-600">Virtual Tour</span>
       </h1>
+
       <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-12 items-start">
         {/* LEFT SIDE */}
-        <div>
+        <div data-aos="fade-right">
           <h2 className="text-3xl font-semibold mb-4 text-gray-700">
             Discover Avenue Five Institute
           </h2>
@@ -73,6 +83,7 @@ const ScheduleTour = () => {
         <form
           onSubmit={handleSubmit}
           className="bg-white p-8 rounded-3xl shadow-2xl space-y-6"
+          data-aos="fade-left"
         >
           <h2 className="text-2xl font-bold mb-2 text-gray-800">
             Book Your Tour
@@ -122,6 +133,7 @@ const ScheduleTour = () => {
               className="border border-gray-300 p-3 rounded-lg w-full focus:ring-2 focus:ring-blue-500"
               onChange={handleChange}
               required
+              data-aos="fade-up"
             />
             <input
               type="text"
@@ -130,6 +142,7 @@ const ScheduleTour = () => {
               className="border border-gray-300 p-3 rounded-lg w-full focus:ring-2 focus:ring-blue-500"
               onChange={handleChange}
               required
+              data-aos="fade-up"
             />
           </div>
 
@@ -141,6 +154,7 @@ const ScheduleTour = () => {
               className="border border-gray-300 p-3 rounded-lg w-full focus:ring-2 focus:ring-blue-500"
               onChange={handleChange}
               required
+              data-aos="fade-up"
             />
             <input
               type="tel"
@@ -149,6 +163,7 @@ const ScheduleTour = () => {
               className="border border-gray-300 p-3 rounded-lg w-full focus:ring-2 focus:ring-blue-500"
               onChange={handleChange}
               required
+              data-aos="fade-up"
             />
           </div>
 
@@ -157,6 +172,7 @@ const ScheduleTour = () => {
             onChange={handleChange}
             className="w-full border border-gray-300 p-3 rounded-lg focus:ring-2 focus:ring-blue-500"
             required
+            data-aos="fade-up"
           >
             <option value="">Program of Interest</option>
             <option value="Cosmetology">Cosmetology</option>
@@ -169,6 +185,7 @@ const ScheduleTour = () => {
             onChange={handleChange}
             className="w-full border border-gray-300 p-3 rounded-lg focus:ring-2 focus:ring-blue-500"
             required
+            data-aos="fade-up"
           >
             <option value="">Preferred Campus</option>
             <option value="Main">Main</option>
@@ -180,6 +197,7 @@ const ScheduleTour = () => {
             onChange={handleChange}
             className="w-full border border-gray-300 p-3 rounded-lg focus:ring-2 focus:ring-blue-500"
             required
+            data-aos="fade-up"
           >
             <option value="">On Campus Schedule</option>
             <option value="Full Time">Full Time</option>
@@ -190,6 +208,7 @@ const ScheduleTour = () => {
             name="hearAbout"
             onChange={handleChange}
             className="w-full border border-gray-300 p-3 rounded-lg focus:ring-2 focus:ring-blue-500"
+            data-aos="fade-up"
           >
             <option value="">How Did You Hear About Us?</option>
             <option value="Google">Google</option>
@@ -197,7 +216,7 @@ const ScheduleTour = () => {
             <option value="Referral">Referral</option>
           </select>
 
-          <label className="flex items-start space-x-2 text-sm text-gray-600">
+          <label className="flex items-start space-x-2 text-sm text-gray-600" data-aos="fade-up">
             <input
               type="checkbox"
               name="consent"
@@ -219,14 +238,14 @@ const ScheduleTour = () => {
               or call us at{' '}
               <a href="tel:512-968-2835" className="text-blue-600 underline">
                 512-968-2835
-              </a>
-              .
+              </a>.
             </span>
           </label>
 
           <button
             type="submit"
             className="w-full bg-blue-600 text-white py-3 rounded-xl text-lg font-semibold shadow hover:bg-blue-700 transition"
+            data-aos="zoom-in-up"
           >
             <FaCheckCircle className="inline-block mr-2 -mt-1" /> Submit Tour Request
           </button>

@@ -1,43 +1,57 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { FaCheck } from "react-icons/fa";
 import aboutImg from "../../assets/about.jpg";
+import AOS from "aos";
+import "aos/dist/aos.css";
+
 const features = [
-  "Lorem ipsum dolor",
-  "Tempor incididunt",
-  "Lorem ipsum dolor",
-  "Incididunt ut labore",
-  "Aliquip ex ea commodo",
-  "Lorem ipsum dolor",
-  "Exercitation ullamco",
-  "Lorem ipsum dolor",
+  "State-Approved Curriculum",
+  "Hands-On Practical Training",
+  "Mentorship by Experienced Instructors",
+  "Salon-Readiness Skills",
+  "Career Guidance & Support",
+  "Workforce Development Focus",
+  "Diverse Student Community",
+  "Confidence-Building Education",
 ];
 
 const AboutSection = () => {
+  useEffect(() => {
+    AOS.init({ duration: 1000 });
+  }, []);
+
   return (
     <div className="max-w-7xl mx-auto px-4 py-16 flex flex-col md:flex-row items-center gap-10">
       {/* Image */}
-      <div className="md:w-1/2 rounded-xl overflow-hidden shadow-md">
+      <div
+        className="md:w-1/2 rounded-xl overflow-hidden shadow-md"
+        data-aos="fade-right"
+      >
         <img
-          src={aboutImg} // Replace with your actual image path
+          src={aboutImg}
           alt="About"
           className="w-full h-auto object-cover"
         />
       </div>
 
       {/* Content */}
-      <div className="md:w-1/2 text-gray-800">
+      <div className="md:w-1/2 text-gray-800" data-aos="fade-left">
         <h2 className="text-3xl font-bold uppercase mb-2">About Us</h2>
         <div className="w-16 h-1 bg-blue-500 mb-6" />
 
         <p className="mb-4 text-gray-600 leading-relaxed">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-          aliquip ex ea commodo consequat.
+          At Cosmetology School of Jersey City, our mission is to equip students
+          with the skills, professionalism, and confidence required to succeed
+          in the beauty industry. We provide a comprehensive educational
+          experience that includes technical training, salon-readiness, and
+          career guidance. Our programs are designed not only to meet state
+          licensure requirements, but to ensure graduates are fully prepared to
+          thrive in real-world salon environments.
         </p>
         <p className="mb-6 text-gray-600 leading-relaxed">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua.
+          With a strong focus on mentorship, hands-on instruction, and workforce
+          development, we are proud to serve a diverse student population and
+          support their growth from classroom to career.
         </p>
 
         <h3 className="text-xl font-semibold mb-4">Why Choose Us?</h3>

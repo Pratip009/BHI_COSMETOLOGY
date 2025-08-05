@@ -1,4 +1,4 @@
-import React, { useRef, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { useParams } from "react-router-dom";
 import data from "../../data/programsDetails.json";
 import fallbackImage from "../../assets/fallback.avif";
@@ -18,6 +18,9 @@ import "swiper/css";
 import { Pagination } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/pagination";
+import AOS from "aos";
+import "aos/dist/aos.css";
+
 const slugToCourseName = (slug) => {
   if (slug === "full-courses") return "Full Courses Package"; // special case
   return slug
@@ -95,6 +98,10 @@ const ProgramDetails = () => {
   if (!course) {
     return <div>Course not found</div>;
   }
+  // eslint-disable-next-line react-hooks/rules-of-hooks
+  useEffect(() => {
+    AOS.init({ duration: 1000, once: true });
+  }, []);
 
   return (
     <div className="pt-24">
@@ -110,21 +117,33 @@ const ProgramDetails = () => {
 
         {/* Content */}
         <div className="relative z-10 text-center px-4">
-          <h1 className="text-4xl md:text-6xl font-bold">
+          <h1 className="text-4xl md:text-6xl font-bold" data-aos="fade-up">
             {course.courseName}
           </h1>
-          <p className="text-xl md:text-2xl font-semibold mt-4">
+          <p
+            className="text-xl md:text-2xl font-semibold mt-4"
+            data-aos="fade-up"
+          >
             Graduate In As Little As <br />
-            <span className="text-white font-bold text-3xl md:text-4xl">
+            <span
+              className="text-white font-bold text-3xl md:text-4xl"
+              data-aos="fade-up"
+            >
               {course.duration}
             </span>
           </p>
 
-          <button className="mt-6 px-6 py-3 bg-lime-400 text-black font-semibold hover:bg-lime-300">
+          <button
+            className="mt-6 px-6 py-3 bg-lime-400 text-black font-semibold hover:bg-lime-300"
+            data-aos="fade-right"
+          >
             SCHEDULE A TOUR
           </button>
 
-          <h2 className="mt-10 text-2xl md:text-3xl font-bold">
+          <h2
+            className="mt-10 text-2xl md:text-3xl font-bold"
+            data-aos="fade-left"
+          >
             NEXT CLASSES START {course.classStart}
           </h2>
 
@@ -184,7 +203,7 @@ const ProgramDetails = () => {
       <section className="bg-gradient-to-b from-white to-gray-50 py-16 px-6 md:px-20">
         <div className="flex flex-col md:flex-row items-center gap-12">
           {/* Left: Video Area */}
-          <div className="relative w-full md:w-1/2">
+          <div className="relative w-full md:w-1/2" data-aos="fade-right">
             {!isPlaying && (
               <>
                 <video
@@ -220,7 +239,10 @@ const ProgramDetails = () => {
           </div>
 
           {/* Right: Text Content */}
-          <div className="w-full md:w-1/2 text-center md:text-left">
+          <div
+            className="w-full md:w-1/2 text-center md:text-left"
+            data-aos="fade-left"
+          >
             <h2 className="text-4xl font-extrabold leading-snug mb-6 text-gray-800">
               {course.courseDescriptionHead.toUpperCase()}
             </h2>
@@ -240,7 +262,10 @@ const ProgramDetails = () => {
       </section>
       {/* Distance learning */}
       <section className="py-20 px-4 sm:px-6 lg:px-24 bg-white">
-        <div className="flex flex-col lg:flex-row items-start gap-12">
+        <div
+          className="flex flex-col lg:flex-row items-start gap-12"
+          data-aos="fade-up"
+        >
           {/* Left Card */}
           <div className="bg-white p-10 shadow-2xl rounded-xl w-full lg:w-2/3 transition duration-300 hover:shadow-[0_8px_30px_rgba(0,0,0,0.12)]">
             <h2 className="text-3xl sm:text-4xl font-extrabold text-[#7B624C] mb-6 uppercase tracking-wide">
@@ -282,7 +307,10 @@ const ProgramDetails = () => {
       </section>
       {/* 4boxes */}
       <div className="w-full bg-white py-10">
-        <div className="max-w-7xl mx-auto px-4 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div
+          className="max-w-7xl mx-auto px-4 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6"
+          data-aos="fade-left"
+        >
           {features.map((feature, index) => (
             <div
               key={index}
@@ -315,10 +343,16 @@ const ProgramDetails = () => {
       </div>
       {/* FAQ */}
       <div className="w-full bg-white py-16 px-6 md:px-20">
-        <h2 className="text-4xl font-extrabold mb-6 text-gray-800 flex items-center justify-center">
+        <h2
+          className="text-4xl font-extrabold mb-6 text-gray-800 flex items-center justify-center"
+          data-aos="fade-right"
+        >
           WHAT YOU WILL LEARN
         </h2>
-        <p className="text-gray-600 text-lg mb-6 text-center">
+        <p
+          className="text-gray-600 text-lg mb-6 text-center"
+          data-aos="fade-left"
+        >
           Our program and facilities have been strategically designed based on
           the proven working knowledge of master educators and beauty industry
           professionals. Avenue Five Institute’s student-centered approach gives
@@ -334,6 +368,7 @@ const ProgramDetails = () => {
             <div
               key={index}
               className="mb-4 shadow border border-gray-200 rounded overflow-hidden"
+              data-aos={index % 2 === 0 ? "fade-right" : "fade-left"} // <-- AOS direction
             >
               {/* Header */}
               <button
@@ -348,7 +383,7 @@ const ProgramDetails = () => {
                 )}
               </button>
 
-              {/* Description with animation */}
+              {/* Description with transition */}
               <div
                 ref={(el) => (contentRefs.current[index] = el)}
                 className={`transition-all duration-500 ease-in-out ${
@@ -364,14 +399,15 @@ const ProgramDetails = () => {
             </div>
           ))}
         </div>
-        <h2 className="text-4xl font-extrabold mb-6 text-gray-800 flex items-center justify-center">
+
+        <h2 className="text-4xl font-extrabold mb-6 text-gray-800 flex items-center justify-center" data-aos="fade-up">
           AND MUCH MORE!
         </h2>
       </div>
       {/* ads */}
-      <div className="max-w-7xl mx-auto px-4 py-12 grid md:grid-cols-2 gap-10 items-center">
+      <div className="max-w-7xl mx-auto px-4 py-12 grid md:grid-cols-2 gap-10 items-center" >
         {/* Left Slider */}
-        <div className="w-full">
+        <div className="w-full" data-aos="zoom-in">
           <Swiper
             spaceBetween={20}
             slidesPerView={1}
@@ -394,7 +430,7 @@ const ProgramDetails = () => {
         </div>
 
         {/* Right Content */}
-        <div className="space-y-6">
+        <div className="space-y-6" data-aos="fade-up">
           <h2 className="text-3xl md:text-4xl font-bold text-gray-800 uppercase">
             Beauty as a Business
           </h2>
@@ -412,7 +448,7 @@ const ProgramDetails = () => {
           </p>
 
           {/* Buttons */}
-          <div className="flex gap-4">
+          <div className="flex gap-4" data-aos="fade-up">
             <button className="bg-lime-400 hover:bg-lime-500 transition font-bold px-6 py-3 text-black rounded shadow">
               LEARN MORE
             </button>
@@ -424,21 +460,21 @@ const ProgramDetails = () => {
       </div>
       {/* why choose us */}
       <div className="w-full bg-white py-16 px-6 md:px-20">
-        <h2 className="text-4xl font-extrabold mb-6 text-gray-800 flex items-center justify-center">
+        <h2 className="text-4xl font-extrabold mb-6 text-gray-800 flex items-center justify-center" data-aos="fade-up">
           WHY CHOOSE US ?
         </h2>
-        <p className="text-gray-600 text-lg mb-6 text-center">
-          Attending an accredited cosmetology school like Bright Horizon Institute
-          ensures you receive a high standard of education that meets rigorous
-          industry benchmarks. Accreditation by recognized agencies such as the
-          National Accrediting Commission of Career Arts and Sciences (NACCAS)
-          signifies that the institution adheres to quality standards in
-          curriculum, faculty qualifications, and student support services. This
-          enhances the credibility of your credentials, qualifies you for
-          financial aid opportunities, and prepares you for state licensure
-          exams. Choosing an accredited school gives you confidence in the
-          education you receive and better prospects for a successful career in
-          the beauty industry.
+        <p className="text-gray-600 text-lg mb-6 text-center" data-aos="fade-right">
+          Attending an accredited cosmetology school like Bright Horizon
+          Institute ensures you receive a high standard of education that meets
+          rigorous industry benchmarks. Accreditation by recognized agencies
+          such as the National Accrediting Commission of Career Arts and
+          Sciences (NACCAS) signifies that the institution adheres to quality
+          standards in curriculum, faculty qualifications, and student support
+          services. This enhances the credibility of your credentials, qualifies
+          you for financial aid opportunities, and prepares you for state
+          licensure exams. Choosing an accredited school gives you confidence in
+          the education you receive and better prospects for a successful career
+          in the beauty industry.
         </p>
       </div>
     </div>

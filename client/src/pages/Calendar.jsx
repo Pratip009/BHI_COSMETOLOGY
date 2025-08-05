@@ -28,44 +28,19 @@ const localizer = dateFnsLocalizer({
 });
 
 const events = [
+  
   {
     id: 1,
-    title: "Summer Classes Begin",
-    start: new Date(2025, 5, 10, 9, 0),
-    end: new Date(2025, 5, 10, 12, 0),
-    description: "Start of summer classes for all departments.",
-    location: "NY",
-    type: "Course Topic",
-  },
-  {
-    id: 2,
-    title: "Orientation Day",
-    start: new Date(2025, 5, 25, 10, 0),
-    end: new Date(2025, 5, 25, 15, 0),
+    title: "Beauty Career Starter Workshop",
+    start: new Date(2025, 7, 16, 12, 0), // 12 PM as placeholder since time is TBD
+    end: new Date(2025, 7, 16, 14, 0),
     description:
-      "Welcome session for new students, campus tour, and meet the faculty.",
-    location: "NJ",
-    type: "Seminar Topic",
-  },
-  {
-    id: 3,
-    title: "Mid-Term Exams",
-    start: new Date(2025, 7, 15, 8, 0),
-    end: new Date(2025, 7, 18, 17, 0),
-    description: "Mid-term exams covering all subjects. Check your exam schedule.",
-    location: "NY",
-    type: "Course Topic",
-  },
-  {
-    id: 4,
-    title: "Graduation Day",
-    start: new Date(2025, 8, 30, 14, 0),
-    end: new Date(2025, 8, 30, 18, 0),
-    description: "Celebrate your success! Ceremony starts at 2 PM in the auditorium.",
-    location: "NJ",
+      "This event is designed for prospective students interested in a career in beauty. Attendees will meet instructors, explore program offerings, and learn more about licensing, scheduling, and career outcomes. Light refreshments will be served, and walk-ins are welcome.",
+    location: "Cosmetology School of Jersey City, 910 Bergen Ave, Floor 3",
     type: "Seminar Topic",
   },
 ];
+
 
 export default function Calendar() {
   const [selectedEvent, setSelectedEvent] = useState(null);

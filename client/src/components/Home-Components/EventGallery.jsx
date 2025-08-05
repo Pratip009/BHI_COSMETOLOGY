@@ -1,40 +1,51 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const categories = ["Show all", "Cosmetology", "Esthetics", "Manicuring"];
 
 const EventGallery = () => {
   const [selectedCategory, setSelectedCategory] = useState("Show all");
 
+  useEffect(() => {
+    AOS.init({ duration: 1000 });
+  }, []);
+
   const events = [
     {
       id: 1,
       category: "Cosmetology",
       title: "Happy Halloween",
-      image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQpwz-MOEjjRQVmKPHOHQ8SYLNA7qd4k5h9VQ&s",
+      image:
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQpwz-MOEjjRQVmKPHOHQ8SYLNA7qd4k5h9VQ&s",
     },
     {
       id: 2,
       category: "Cosmetology",
       title: "Mad for Mod",
-      image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSuCAKIRmYjyfSVcgS7e5kK_QbIFeZjrTs9Dg&s",
+      image:
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSuCAKIRmYjyfSVcgS7e5kK_QbIFeZjrTs9Dg&s",
     },
     {
       id: 3,
       category: "Esthetics",
       title: "The Four Elements",
-      image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTvc_ZrmkS4GofN11xuKNuAC-3NNFUf9E82WQ&s",
+      image:
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTvc_ZrmkS4GofN11xuKNuAC-3NNFUf9E82WQ&s",
     },
     {
       id: 4,
       category: "Esthetics",
       title: "Jan Marini Launch",
-      image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTP9viVhSzrtpXEkFGjpW3a8RxkZDphVVvHPQ&s",
+      image:
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTP9viVhSzrtpXEkFGjpW3a8RxkZDphVVvHPQ&s",
     },
     {
       id: 5,
       category: "Manicuring",
       title: "Vintage Hollywood",
-      image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRmS4lqkDaZHmPDsPhZnPWBGXBiilTObPj_KQ&s",
+      image:
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRmS4lqkDaZHmPDsPhZnPWBGXBiilTObPj_KQ&s",
     },
   ];
 
@@ -45,12 +56,12 @@ const EventGallery = () => {
 
   return (
     <div className="w-full py-16 px-4 max-w-6xl mx-auto text-center">
-      <h2 className="text-3xl md:text-4xl font-extrabold mb-10 text-gray-800">
+      <h2 className="text-3xl md:text-4xl font-extrabold mb-10 text-gray-800" data-aos="fade-up">
         School Events
       </h2>
 
       {/* Filter Buttons */}
-      <div className="flex flex-wrap justify-center gap-3 mb-10">
+      <div className="flex flex-wrap justify-center gap-3 mb-10" data-aos="fade-up" data-aos-delay="100">
         {categories.map((cat) => (
           <button
             key={cat}
@@ -68,10 +79,12 @@ const EventGallery = () => {
 
       {/* Event Grid */}
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
-        {filteredEvents.map((event) => (
+        {filteredEvents.map((event, index) => (
           <div
             key={event.id}
             className="rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-transform transform hover:-translate-y-1 bg-white"
+            data-aos="zoom-in"
+            data-aos-delay={index * 100}
           >
             <img
               src={event.image}

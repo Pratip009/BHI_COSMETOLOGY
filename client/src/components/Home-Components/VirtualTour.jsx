@@ -1,6 +1,8 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { EffectCoverflow, Navigation, Pagination } from "swiper/modules";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 import "swiper/css";
 import "swiper/css/effect-coverflow";
@@ -14,12 +16,22 @@ const images = [
 ];
 
 const VirtualTour = () => {
+  useEffect(() => {
+    AOS.init({ duration: 1000, once: true });
+  }, []);
+
   return (
     <section className="py-12 px-4 max-w-7xl mx-auto text-center font-sans">
-      <h2 className="text-3xl md:text-4xl font-extrabold mb-8">Virtual Tour</h2>
+      <h2
+        className="text-3xl md:text-4xl font-extrabold mb-8"
+        data-aos="fade-up"
+      >
+        Virtual Tour
+      </h2>
+
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
         {/* YouTube Video */}
-        <div className="w-full aspect-video">
+        <div className="w-full aspect-video" data-aos="fade-right">
           <iframe
             className="w-full h-full rounded-xl shadow-lg"
             src="https://www.youtube.com/embed/YOUR_VIDEO_ID"
@@ -30,7 +42,7 @@ const VirtualTour = () => {
         </div>
 
         {/* 3D Image Slider */}
-        <div className="w-full">
+        <div className="w-full" data-aos="fade-left">
           <Swiper
             effect="coverflow"
             grabCursor={true}
